@@ -219,7 +219,7 @@ public class ApiWrapper implements Api {
     }
   }
 
-  private ManagedChannel buildChannel(ApiWrapperBuilder builder, String target) {
+  public ManagedChannel buildChannel(ApiWrapperBuilder builder, String target) {
     ManagedChannelBuilder<?> channelBuilder;
     if (!builder.isUseTLS()) {
       channelBuilder =  ManagedChannelBuilder.forTarget(target).usePlaintext();
